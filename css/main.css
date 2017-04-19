@@ -98,26 +98,27 @@ textarea {
 
 
 body {
-    background-color: darkseagreen;
+    background-color: #456;
     color: white;
 }
 
 #timer-container {
     margin: 0 auto;
     text-align: center;
-    border: 1px solid red;
 }
 
 #countdown {
     width: 25vh;
     height: 25vh;
     text-align: center;
-    position: absolute;
+    position: fixed;
     line-height: 25vh;
     border-radius: 50%;
     background-color: black;
-    left: calc(50% - 22vw);
+    left: calc(50% - 8vw);
     top:  calc(50% - 12.5vh);
+    color: #456;
+    font-size: 55px;
 }
 
 

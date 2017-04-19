@@ -8,19 +8,20 @@ var display = function(toDisplay){
 };
 
 
+
 var startTimer = function() {
     setInterval(function(){
-        if (length !== 0) {
+        if (length === 0) {
+            clearInterval(startTimer);
+            display("ping!");
+        } else {       
             length--;
             display(length);
-        } else {       
-            display("ping!");
-            clearInterval(startTimer);  
         }
-        }, 1000);
+    }, 1000);
 };
 
-    
+display(length);
 startButton.click(startTimer);
     
 });
