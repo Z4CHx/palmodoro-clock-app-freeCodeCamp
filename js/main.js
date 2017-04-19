@@ -2,7 +2,9 @@ $(document).ready(function(){
 
 var screen = $("div#timer-container #countdown");
 var startButton =$("div#countdown");
-var length = 5;
+var addButton =$("div#add-time");
+var subtractButton =$("div#subtract-time");
+var timeLeft = 5;
 var display = function(toDisplay){   
     screen.html(toDisplay);
 };
@@ -11,17 +13,25 @@ var display = function(toDisplay){
 
 var startTimer = function() {
     setInterval(function(){
-        if (length === 0) {
+        if (timeLeft === 0) {
             clearInterval(startTimer);
-            display("ping!");
+            
         } else {       
-            length--;
-            display(length);
+            timeLeft--;
+            display(timeLeft);
         }
     }, 1000);
 };
 
-display(length);
+display(timeLeft);
 startButton.click(startTimer);
+addButton.click(function(){
+    timeLeft+=5;
+    display(timeLeft);
+});
+subtractButton.click(function(){
+    timeLeft-=5;
+    display(timeLeft);
+});
     
 });

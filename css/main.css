@@ -122,6 +122,15 @@ body {
 }
 
 
+.btn-group {
+    margin-top: 100px;
+}
+
+.btn {
+    font-size: 60px;
+    cursor: pointer;
+}
+
 
 
 
