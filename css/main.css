@@ -103,20 +103,18 @@ body {
 }
 
 #timer-container {
-    margin: 0 auto;
+    width: 100%;
     text-align: center;
 }
 
 #countdown {
+    margin: 0 auto;
     width: 25vh;
     height: 25vh;
     text-align: center;
-    position: fixed;
     line-height: 25vh;
     border-radius: 50%;
     background-color: black;
-    left: calc(50% - 8vw);
-    top:  calc(50% - 12.5vh);
     color: #456;
     font-size: 55px;
 }
