@@ -1,9 +1,12 @@
 $(document).ready(function(){
 
 var screen = $("div#timer-container #countdown");
-var startButton =$("div#countdown");
-var addButton =$("div#add-time");
-var subtractButton =$("div#subtract-time");
+var startButton = $("div#countdown");
+var addButton = $("div#add-time");
+var subtractButton = $("div#subtract-time");
+var pauseButton =  $("div#pause");
+var restartButton =  $("div#reset");
+var presetButton = $(".timer-preset");
 var display = function(toDisplay){   
     screen.html(toDisplay);
 };
@@ -35,6 +38,13 @@ function stopCount() {
     clearTimeout(t);
     countdown_is_on = 0;
 }
+    
+function startPreset() {
+    timeLeft = parseInt(this.innerHTML);
+    display(timeLeft);
+}    
+    
+    
 
 display(timeLeft);    
 startButton.click(startCountdown);
@@ -46,5 +56,11 @@ subtractButton.click(function(){
     timeLeft-=5;
     display(timeLeft);
 });
+pauseButton.click(stopCount);
+restartButton.click(function(){
+    timeLeft = 25;
+    display(timeLeft);
+});
+presetButton.click(startPreset)
     
 });

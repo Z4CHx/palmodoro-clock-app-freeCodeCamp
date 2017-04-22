@@ -116,17 +116,39 @@ body {
     border-radius: 50%;
     background-color: black;
     color: #456;
-    font-size: 55px;
+    font-size: 96px;
 }
 
 
-.btn-group {
+#time-mod-group {
     margin-top: 100px;
+}
+
+#play-controls-group {
+    margin-top: 50px;
+}
+
+#preset-timers-group {
+    margin-top: 25px;
+}
+
+#preset-timers-group div {
+    display: inline-block;
+    font-size: 24px;
+    padding:25px;
+    background-color:darkcyan;
+    border-radius: 20px;
+    margin: 0 10px 0 10px;
 }
 
 .btn {
     font-size: 60px;
     cursor: pointer;
+}
+
+.play-control {
+    display: inline-block;
+    font-size: 24px;
 }
 
 
