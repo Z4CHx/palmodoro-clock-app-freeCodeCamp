@@ -98,8 +98,22 @@ textarea {
 
 
 body {
-    background-color: #456;
-    color: white;
+    background-color: lightgray;
+    background-image: url('../img/image_01.jpg');
+    color: gray;
+}
+
+#background-overlay {
+    position: absolute;
+    opacity: .75;
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -2;
 }
 
 #timer-container {
@@ -114,14 +128,24 @@ body {
     text-align: center;
     line-height: 25vh;
     border-radius: 50%;
-    background-color: black;
-    color: #456;
+    background-color: gray;
     font-size: 96px;
+    color: lightgray;
 }
 
+#countdown-bar {
+    position: absolute;
+    height: 25px;
+    width: 100%;
+    top: calc(50% - 10px);
+    background-color: darkseagreen;
+    z-index: -1;
+    -webkit-transition: .25s;
+    transition: .25s;
+}
 
 #time-mod-group {
-    margin-top: 100px;
+    margin-top: 125px;
 }
 
 #play-controls-group {
@@ -136,14 +160,17 @@ body {
     display: inline-block;
     font-size: 24px;
     padding:25px;
-    background-color:darkcyan;
     border-radius: 20px;
     margin: 0 10px 0 10px;
+    border: 3px solid gray;
 }
 
 .btn {
     font-size: 60px;
     cursor: pointer;
+}
+
+.btn-group {
 }
 
 .play-control {
