@@ -16,9 +16,10 @@ $(document).ready(function(){
         chosenTime = time;
     };
     var countdownBar = $("#countdown-bar");
+    
 
     var finishedNotification = document.createElement('audio');
-    finishedNotification.src = './media/timerdone.ogg';
+    finishedNotification.src = 'http://www.zacharydurland.com/palmodoro-timer-app/media/timerdone.mp3';
 
 
     function countdown() {
