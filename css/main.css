@@ -257,7 +257,7 @@ body {
 #countdown {
     display: block;
     position: absolute;
-    top: -50px;
+    top: 25px;
     left: calc(50% - 12vh);
     width: 25vh;
     height: 25vh;
@@ -275,7 +275,7 @@ body {
     position: absolute;
     height: 50px;
     width: 100%;
-    top: 75px;
+    top: 100px;
     background-color: white;
     z-index: -1;
     -webkit-transition: .25s;
