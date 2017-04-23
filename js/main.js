@@ -48,11 +48,13 @@ function stopCount() {
     
 function startPreset() {
     timeLeft = parseInt(this.innerHTML);
+    setChosenTime(timeLeft);
     display(timeLeft);
 }    
     
 var display = function(toDisplay){   
     screen.html(toDisplay);
+    console.log(timeLeft/chosenTime * 100);
     countdownBar.css('width', '' + timeLeft/chosenTime * 100 + '%');
 };
     
@@ -71,7 +73,7 @@ subtractButton.click(function(){
 });
 pauseButton.click(stopCount);
 restartButton.click(function(){
-    timeLeft = 25;
+    timeLeft = 10;
     setChosenTime(timeLeft);
     display(timeLeft);
 });
