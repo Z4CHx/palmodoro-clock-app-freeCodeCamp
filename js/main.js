@@ -68,7 +68,11 @@ $(document).ready(function(){
         display(timeLeft);
     });
     subtractButton.click(function(){
-        timeLeft-=5;
+        if(timeLeft >= 5){
+            timeLeft-=5;
+        } else {
+            timeLeft + 0;
+        }
         setChosenTime(timeLeft);
         display(timeLeft);
     });
